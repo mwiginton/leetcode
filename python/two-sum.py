@@ -19,18 +19,18 @@
 # SOLUTION
 def two_sum(nums, target):
     indices = [0, 0]
-    for i in range(len(nums)):
-        if i != len(nums) - 1:
-            index_to_add = i+1
-            val_to_add = nums[i + 1]
-            if(nums[i] + val_to_add == target):
+    # search first element in the array
+    for i in range(len(nums) - 1):
+        # search next element in the array
+        for j in range(i + 1, len(nums)):
+            # if these two values equal the target then we have a match
+            if nums[i] + nums[j] == target:
                 indices[0] = i
-                indices[1] = index_to_add
-                break
+                indices[1] = j
     return indices
 
         
 
-nums = [3,3]
+nums = [3,2,3]
 target = 6
 print(two_sum(nums, target))
