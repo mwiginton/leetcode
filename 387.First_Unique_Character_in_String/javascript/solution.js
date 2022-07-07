@@ -1,3 +1,5 @@
+// Walkthrough and discussion: https://medium.com/@michelle.wiginton00/leetcode-387-first-unique-character-in-a-string-2903d80b8838
+
 var firstUniqChar = function(s) {
     let charMap = [];
     for (let i = 0; i < s.length; i++) {
